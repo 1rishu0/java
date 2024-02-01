@@ -1,20 +1,27 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package overloading;
 
-/**
- *
- * @author RISHU
- */
+class test
+{
+    public int max(int a, int b)
+    {
+        return a>b?a:b;
+    }
+    
+    public int max(int a,int b,int c)
+    {
+        if (a>b && a>c) return a;
+        else if (b>c) return b;
+        return c;
+    }
+}
 public class Overloading {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    public static void main(String[] args) 
+    {
+        test t=new test();
+        t.max(10, 5);
+        t.max(10, 15,5);
+        
     }
     
 }
