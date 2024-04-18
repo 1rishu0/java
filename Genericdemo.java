@@ -1,5 +1,9 @@
 package genericdemo;
 
+class A {}
+class B extends A{}
+class C extends B{}
+
 class data<t>
 {
     public t obj;
@@ -16,7 +20,8 @@ class data<t>
 }
 
 class myArray<m>
-//class myArray<m extends Number>//I PUT THE BOUND HERE TO LIMIT THE DATA TYPES
+//class myArray<? super B> // IF I WRTIE SUPER WHICH MEANS I CAN ONLY USE B AND A. SUPER IS ONLY ALLOWED WITH WILDCARD(?)
+//class myArray<m extends Number>//I PUT THE BOUND HERE TO LIMIT THE DATA TYPES, HERE IN EXTENDS I CAN USE A , B AND C IF I WRITE EXTENDS A
 {
     m A[]=(m[]) new Object[10];
     int length=0;
@@ -44,6 +49,14 @@ class myArray<m>
 public class Genericdemo<T> 
 {
 //    T data[]=(T[]) new Object[3];
+    
+    static <E> void show(E[] list)
+    {
+        for (E x:list)
+        {
+            System.out.println(x);
+        }
+    }
 
     public static void main(String[] args) 
     {
@@ -67,13 +80,17 @@ public class Genericdemo<T>
         
         
         //PART3
-        myArray<Integer> ma=new myArray();
+//        myArray<Integer> ma=new myArray();
+//        
+//        ma.append(33);
+//        ma.append(44);
+//        ma.append(23);
+//        
+//        ma.display();
         
-        ma.append(33);
-        ma.append(44);
-        ma.append(23);
         
-        ma.display();
+        //PART4
+        show(new String[]{"Hello ji","Kaise Ho","Mei theek hu"});
     }
     
 }
