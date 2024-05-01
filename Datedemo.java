@@ -22,6 +22,16 @@ public class Datedemo
         
 //        Date d=new Date("4/8/2003");
         Date d=new Date();
+        
+        GregorianCalendar gc=new GregorianCalendar();
+        
+        TimeZone tz=gc.getTimeZone();
+        
+        System.out.println(tz.getID());
+        gc.setTimeZone(TimeZone.getTimeZone("America/Los_Angeles"));
+        
+        System.out.println(gc.isLeapYear(2024));
+        System.out.println(Calendar.DATE);
 
         
         System.out.println(System.currentTimeMillis());
