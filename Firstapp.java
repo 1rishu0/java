@@ -9,7 +9,54 @@ import java.awt.*;
  *
  * @author RISHAB
  */
-public class Firstapp {
+////FIRST METHOD
+//class MyFrame extends Frame
+//{
+//    Label l;
+//    TextField tf;
+//    Button b;
+//    
+//    public MyFrame()
+//    {
+//        super("My App");
+//        
+//        setLayout(new FlowLayout());
+//        
+//        l=new Label("Name");
+//        tf=new TextField(30);
+//        b=new Button("OK");
+//        
+//        add(l);
+//        add(tf);
+//        add(b);
+//    }
+//}
+
+
+
+
+public class Firstapp extends Frame//it is a application claas because it handle main method
+{
+//    SECOND METHOD
+    
+    Label l;
+    TextField tf;
+    Button b;
+    
+    public Firstapp()
+    {
+        super("My App");
+        
+        setLayout(new FlowLayout());
+        
+        l=new Label("Name");
+        tf=new TextField(30);
+        b=new Button("OK");
+        
+        add(l);
+        add(tf);
+        add(b);
+    }
 
     /**
      * @param args the command line arguments
@@ -17,22 +64,46 @@ public class Firstapp {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        Frame f=new Frame("My First App");
-        f.setLayout(new FlowLayout()); //to limit the size of the button
+        Firstapp mf=new Firstapp();
         
-        Label l=new Label("Name");
+        mf.setSize(400,400);
+        mf.setVisible(true);
         
-        TextField tf=new TextField(20);
         
-//        button is come with constructor
-        Button b=new Button("OK");
         
-        f.add(l);
-        f.add(tf);
-        f.add(b);
         
-        f.setSize(300, 300);
-        f.setVisible(true);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+//        Frame f=new Frame("My First App");
+//        f.setLayout(new FlowLayout()); //to limit the size of the button
+//        
+//        Label l=new Label("Name");
+//        
+//        TextField tf=new TextField(20);
+//        
+////        button is come with constructor
+//        Button b=new Button("OK");
+//        
+//        f.add(l);
+//        f.add(tf);
+//        f.add(b);
+//        
+//        f.setSize(300, 300);
+//        f.setVisible(true);
     }
     
 }
